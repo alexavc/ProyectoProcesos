@@ -14,8 +14,12 @@ import supervisorRecamaras.InicioSupervisor;
 
 import javax.swing.JPasswordField;
 import java.awt.Font;
+
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.awt.event.ActionEvent;
 import javax.swing.JSeparator;
 import java.awt.Color;
@@ -93,35 +97,31 @@ public class LoginSys {
 			public void actionPerformed(ActionEvent e) {
 				String contrasena = campoPassword.getText();
 				String usuario = campoUsuario.getText();
-				
-				if(contrasena.contains("procesos")&& usuario.contains("1212")) {
-					campoPassword.setText(null);
-					campoUsuario.setText(null);
-					
-				//	InicioSupervisor inicio = new InicioSupervisor();
-					InicioSupervisor.main(null);
-					System.exit(0);//cierra ventana loginSys
-					
-				}
-				if (contrasena.contains("casita") && usuario.contains("2121"))
-				{	
-				//	InicioRecamarista inicioRec = new InicioRecamarista();
-					InicioRecamarista.main(null);
-					System.exit(0);
-				}
-				if(contrasena.contains("perro") && usuario.contains("8858"))
-				{
-					//InicioRecepcion inicioRp = new InicioRecepcion();
-					InicioRecepcion.main(null);
-				}
-				else {
-					JOptionPane.showMessageDialog(null, "Usuario o contrasena incorrecta", "Error ingreso al sistema", JOptionPane.ERROR_MESSAGE);
-					campoPassword.setText(null);
-					campoUsuario.setText(null);
-				}
+			
+					if(contrasena.contains("procesos")&& usuario.contains("1212")) {
+						
+							InicioSupervisor.main(null);
+							frameLogin.setVisible(false);//la ventana login ya no es visible
+						}
+						else if(contrasena.contains("casita") && usuario.contains("2121"))
+						{	
+		
+							InicioRecamarista.main(null);
+							frameLogin.setVisible(false);
+						}
+						else if(contrasena.contains("perro") && usuario.contains("8858"))
+						{
+							InicioRecepcion.main(null);
+							frameLogin.setVisible(false);
+						}
+						else {
+							JOptionPane.showMessageDialog(null, "Usuario o contrasena incorrecta", "Error ingreso al sistema", JOptionPane.ERROR_MESSAGE);
+							campoPassword.setText(null);
+							campoUsuario.setText(null);
+					}				
 			}
-			}
-		);
+		});
+		
 		btnEntrar.setBounds(261, 150, 96, 23);
 		frameLogin.getContentPane().add(btnEntrar);
 		
