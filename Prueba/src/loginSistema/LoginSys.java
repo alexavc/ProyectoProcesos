@@ -100,11 +100,14 @@ public class LoginSys {
 					
 				//	InicioSupervisor inicio = new InicioSupervisor();
 					InicioSupervisor.main(null);
+					System.exit(0);//cierra ventana loginSys
+					
 				}
-				if(contrasena.contains("casita") && usuario.contains("2121"))
-				{
+				if (contrasena.contains("casita") && usuario.contains("2121"))
+				{	
 				//	InicioRecamarista inicioRec = new InicioRecamarista();
 					InicioRecamarista.main(null);
+					System.exit(0);
 				}
 				if(contrasena.contains("perro") && usuario.contains("8858"))
 				{
