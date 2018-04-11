@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class InicioRecepcion {
-
+//hola mundo
 	private JFrame frame;
 
 	/**
