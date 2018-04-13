@@ -106,7 +106,7 @@ public class InicioSupervisor extends JFrame{
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				if(JOptionPane.showConfirmDialog( btnSalir, "¿Seguro(a) que quieres salir?", "Sistema", 
+				if(JOptionPane.showConfirmDialog( btnSalir, "Seguro(a) que quieres salir?", "Sistema", 
 						JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
 					System.exit(0);
 				}

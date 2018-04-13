@@ -95,21 +95,23 @@ public class LoginSys {
 		btnEntrar.setFont(new Font("Malgun Gothic", Font.PLAIN, 15));
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String contrasena = campoPassword.getText();
+				char contrasena[] = campoPassword.getPassword();
+				String pass = new String(contrasena);
+				//String contrasena = campoPassword.getText();
 				String usuario = campoUsuario.getText();
 			
-					if(contrasena.contains("procesos")&& usuario.contains("1212")) {
+					if(pass.equals("procesos")&& usuario.equals("1212")) {
 						
 							InicioSupervisor.main(null);
 							frameLogin.setVisible(false);//la ventana login ya no es visible
 						}
-						else if(contrasena.contains("casita") && usuario.contains("2121"))
+						else if(pass.equals("casita") && usuario.equals("2121"))
 						{	
 		
 							InicioRecamarista.main(null);
 							frameLogin.setVisible(false);
 						}
-						else if(contrasena.contains("perro") && usuario.contains("8858"))
+						else if(pass.equals("perro") && usuario.equals("8858"))
 						{
 							InicioRecepcion.main(null);
 							frameLogin.setVisible(false);

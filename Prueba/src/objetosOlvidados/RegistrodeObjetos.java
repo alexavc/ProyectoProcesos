@@ -110,8 +110,8 @@ public class RegistrodeObjetos extends JFrame {
 
 		// rango de valor de los dias
 		SpinnerNumberModel modelDia = new SpinnerNumberModel(new Integer(0), // inicio
-				new Integer(0), // Límite inferior
-				new Integer(31), // Límite superior
+				new Integer(0), // L\u00edmite inferior
+				new Integer(31), // L\u00edmite superior
 				new Integer(1) // incremento-decremento
 		);
 		JSpinner spinnerDia = new JSpinner(modelDia);
@@ -127,13 +127,13 @@ public class RegistrodeObjetos extends JFrame {
 		spinnerMes.setBounds(265, 93, 62, 20);
 		panel.add(spinnerMes);
 
-		// rango de valor para los años
+		// rango de valor para los aï¿½os
 		SpinnerNumberModel modelAno = new SpinnerNumberModel(new Integer(2000), new Integer(2000), new Integer(2030),
 				new Integer(1));
-		JSpinner spinnerAño = new JSpinner(modelAno);
-		spinnerAño.setForeground(SystemColor.info);
-		spinnerAño.setBounds(335, 93, 63, 20);
-		panel.add(spinnerAño);
+		JSpinner spinnerAno = new JSpinner(modelAno);
+		spinnerAno.setForeground(SystemColor.info);
+		spinnerAno.setBounds(335, 93, 63, 20);
+		panel.add(spinnerAno);
 
 		// rango de valor de las habitaciones
 		SpinnerNumberModel modelHabitacion = new SpinnerNumberModel(new Integer(100), new Integer(100),
